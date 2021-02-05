@@ -41,50 +41,50 @@ class DemoValues {
   static final List<CommentModel> _comments = <CommentModel>[
     CommentModel(
       comment:
-          "Et hic et sequi inventore. Molestiae laboriosam commodi exercitationem eum. ",
+          "WONDERFUL. ",
       user: users[0],
-      time: DateTime(2019, 4, 30),
+      time: DateTime(2020, 12, 30),
     ),
     CommentModel(
-      comment: "Unde id provident ut sunt in consequuntur qui sed. ",
+      comment: "HOW TO KNIT IT. ",
       user: users[1],
-      time: DateTime(2018, 5, 30),
+      time: DateTime(2020, 12, 30),
     ),
     CommentModel(
-      comment: "Eveniet nesciunt distinctio sint ut. ",
+      comment: "Beautiful. ",
       user: users[0],
       time: DateTime(2020, 6, 30),
     ),
     CommentModel(
-      comment: "Et facere a eos accusantium culpa quaerat in fugiat suscipit. ",
+      comment: "Cute. ",
       user: users[2],
       time: DateTime(2020, 4, 30),
     ),
     CommentModel(
-      comment: "Necessitatibus pariatur harum deserunt cum illum ut.",
+      comment: "Cute.",
       user: users[1],
       time: DateTime(2020, 5, 30),
     ),
     CommentModel(
       comment:
-          "Accusantium neque quis provident voluptatem labore quod dignissimos eum quaerat. ",
+          "Teach me Guru. ",
       user: users[2],
       time: DateTime(2020, 6, 30),
     ),
     CommentModel(
       comment:
-          "Accusantium neque quis provident voluptatem labore quod dignissimos eum quaerat. ",
+          "Nice. ",
       user: users[1],
       time: DateTime(2020, 4, 30),
     ),
     CommentModel(
-      comment: "Neque est ut rerum vel sunt harum voluptatibus et. ",
+      comment: "Nice. ",
       user: users[0],
       time: DateTime(2020, 5, 30),
     ),
     CommentModel(
       comment:
-          "Hic accusantium minus fuga exercitationem id aut expedita doloribus. ",
+          "I like it. ",
       user: users[1],
       time: DateTime(2020, 6, 30),
     ),
@@ -94,10 +94,10 @@ class DemoValues {
     PostModel(
       id: "1",
       author: users[0],
-      title: "Maple Trees",
+      title: "Maple Tree",
       summary: "An in-depth study on maple trees.",
-      body: "This is a short body.",
-      imageURL: "assets/images/knit.png",
+      body: "This knitting of maple leave.",
+      imageURL: "assets/images/mapletree.png",
       postTime: DateTime(2020, 11, 27, 7, 36),
       reacts: 123,
       views: 456,
@@ -106,10 +106,10 @@ class DemoValues {
     PostModel(
       id: "2",
       author: users[1],
-      title: "Oak Trees",
-      summary: "Preaching about oak trees",
+      title: "Glove ready for Winter",
+      summary: "Ready for winter",
       body: _body,
-      imageURL: "assets/images/knit.png",
+      imageURL: "assets/images/glove.png",
       postTime: DateTime(2020, 12, 25),
       reacts: 321,
       views: 654,
@@ -118,10 +118,10 @@ class DemoValues {
     PostModel(
       id: "3",
       author: users[2],
-      title: "Mango Trees",
-      summary: "Gives shadow and fruit. Absolute win, no?",
+      title: "My Teddy",
+      summary: "Where is my honey?",
       body: _body * 2,
-      imageURL: "assets/images/knit.png",
+      imageURL: "assets/images/bear.png",
       postTime: DateTime(2020, 12, 28),
       reacts: 213,
       views: 546,

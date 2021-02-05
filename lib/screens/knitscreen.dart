@@ -7,12 +7,12 @@ import 'package:a_knitting_app/user.dart';
 
 
 class FoodScreenDetails extends StatefulWidget {
-  final Stuff food;
+  final Stuff stuff;
   final User user;
 
-  const FoodScreenDetails({Key key, this.food, this.user}) : super(key: key);
+  const FoodScreenDetails({Key key, this.stuff, this.user}) : super(key: key);
 
-  get stuff => null;
+
 
   @override
   _FoodScreenDetailsState createState() => _FoodScreenDetailsState();
@@ -26,8 +26,8 @@ class _FoodScreenDetailsState extends State<FoodScreenDetails> {
   @override
   void initState() {
     super.initState();
-    selectedQty = int.parse(widget.food.stuffcurqty) ?? 1;
-    _remcontroller.text = widget.food.remarks;
+    selectedQty = int.parse(widget.stuff.stuffcurqty) ?? 1;
+    _remcontroller.text = widget.stuff.remarks;
   }
 
   @override
@@ -36,7 +36,7 @@ class _FoodScreenDetailsState extends State<FoodScreenDetails> {
     screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
-          title: Text(widget.food.stuffname),
+          title: Text(widget.stuff.stuffname),
         ),
         body: Container(
             child: Padding(
@@ -69,7 +69,7 @@ class _FoodScreenDetailsState extends State<FoodScreenDetails> {
                       ),
                       SizedBox(height: 10),
                       Text("Price RM " +
-                          (selectedQty * double.parse(widget.food.stuffprice))
+                          (selectedQty * double.parse(widget.stuff.stuffprice))
                               .toStringAsFixed(2),style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
                       TextField(
                           controller: _remcontroller,
@@ -103,7 +103,7 @@ class _FoodScreenDetailsState extends State<FoodScreenDetails> {
         // return object of type Dialog
         return AlertDialog(
           title: new Text(
-            "Order " + widget.food.stuffname + "?",
+            "Order " + widget.stuff.stuffname + "?",
             style: TextStyle(
               color: Colors.black,
             ),
@@ -150,10 +150,10 @@ class _FoodScreenDetailsState extends State<FoodScreenDetails> {
   void _orderFood() {
     http.post("https://slumberjer.com/foodninjav2/php/insert_cart.php", body: {
       "email": widget.user.email,
-      "foodid": widget.food.stuffid,
+      "foodid": widget.stuff.stuffid,
       "foodqty": selectedQty.toString(),
       "remarks": _remcontroller.text,
-      "restid": widget.food.stuffid,
+      "restid": widget.stuff.stuffid,
     }).then((res) {
       print(res.body);
       if (res.body == "success") {

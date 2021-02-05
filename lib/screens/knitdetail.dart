@@ -260,7 +260,7 @@ class _ShopScreenDetailsState extends State<ShopScreenDetails> {
         context,
         MaterialPageRoute(
             builder: (BuildContext context) => FoodScreenDetails(
-                  food: curfood,
+                  stuff: curfood,
                   user: widget.user,
                 )));
   }
